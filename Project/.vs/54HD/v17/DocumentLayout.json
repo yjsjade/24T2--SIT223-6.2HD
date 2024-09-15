@@ -1,0 +1,53 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\jings\\OneDrive\\Desktop\\university\\24T1\\SIT232 OBJECT-ORIENTED DEVELOPMENT\\19. 5.4HD Enhanced Reaction-timer\\54HD\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{54C09ADC-7C6A-4C76-AA4C-57DEB679B891}|54HD.csproj|c:\\users\\jings\\onedrive\\desktop\\university\\24t1\\sit232 object-oriented development\\19. 5.4hd enhanced reaction-timer\\54hd\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54C09ADC-7C6A-4C76-AA4C-57DEB679B891}|54HD.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54C09ADC-7C6A-4C76-AA4C-57DEB679B891}|54HD.csproj|c:\\users\\jings\\onedrive\\desktop\\university\\24t1\\sit232 object-oriented development\\19. 5.4hd enhanced reaction-timer\\54hd\\enhancedreactioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54C09ADC-7C6A-4C76-AA4C-57DEB679B891}|54HD.csproj|solutionrelative:enhancedreactioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "EnhancedReactionController.cs",
+              "DocumentMoniker": "C:\\Users\\jings\\OneDrive\\Desktop\\university\\24T1\\SIT232 OBJECT-ORIENTED DEVELOPMENT\\19. 5.4HD Enhanced Reaction-timer\\54HD\\EnhancedReactionController.cs",
+              "RelativeDocumentMoniker": "EnhancedReactionController.cs",
+              "ToolTip": "C:\\Users\\jings\\OneDrive\\Desktop\\university\\24T1\\SIT232 OBJECT-ORIENTED DEVELOPMENT\\19. 5.4HD Enhanced Reaction-timer\\54HD\\EnhancedReactionController.cs",
+              "RelativeToolTip": "EnhancedReactionController.cs",
+              "ViewState": "AQIAAI4AAAAAAAAAAAAqwKEAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-25T02:14:05.394Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\jings\\OneDrive\\Desktop\\university\\24T1\\SIT232 OBJECT-ORIENTED DEVELOPMENT\\19. 5.4HD Enhanced Reaction-timer\\54HD\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\jings\\OneDrive\\Desktop\\university\\24T1\\SIT232 OBJECT-ORIENTED DEVELOPMENT\\19. 5.4HD Enhanced Reaction-timer\\54HD\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAADkAAAAAAAAAAAAYwD8AAAACAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-25T02:12:16.584Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
