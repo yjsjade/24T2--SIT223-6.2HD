@@ -1,20 +1,14 @@
 pipeline {
     agent any
 
-    environment {
-        docker { image 'docker:latest' }
-    }
-
     stages {
-        stage('Checkout and restore dependencies') {
-            steps {
-                git branch: 'main', url: 'https://github.com/yjsjade/24T2--SIT223-6.2HD.git'
-            }
-        }
-
         stage('Build Docker Image') {
             steps {
                 script {
+                    // Ensure Docker is installed and accessible
+                    sh 'docker --version'
+                    
+                    // Build Docker image
                     sh 'docker build -t my-dotnet-app .'
                 }
             }
@@ -23,6 +17,7 @@ pipeline {
         stage('Run Docker Container') {
             steps {
                 script {
+                    // Run Docker container
                     sh 'docker run -d -p 8080:80 my-dotnet-app'
                 }
             }
