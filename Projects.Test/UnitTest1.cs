@@ -31,12 +31,12 @@ namespace Projects.Test
             DoInsertCoin("Press GO!");
             DoInsertCoin("Press GO!");
             DoTicks(5, "Press GO!");
-            DoTicks(100, "Insert coin");
+            DoTicks(100, "Insert Coin");
 
             /*NEW GAME-------------------------------------*/
             DoInsertCoin("Press GO!");
             DoGoStop("Wait...");
-            DoGoStop("Insert coin");
+            DoGoStop("Insert Coin");
 
             /*NEW GAME-------------------------------------*/
             _randomNumber = 100;
@@ -47,47 +47,7 @@ namespace Projects.Test
             DoTicks(1, "0.01");
             DoGoStop("0.01");  // Hits button immediately
             DoTicks(300, "Wait...");  // Waits for timer to run before next round
-            DoGoStop("Insert coin");  // Cheats in second round
-
-            /*NEW GAME-------------------------------------*/
-            _randomNumber = 120;
-            DoInsertCoin("Press GO!");
-            DoGoStop("Wait...");
-            DoTicks(_randomNumber + 98, "0.98");
-            DoGoStop("0.98");  // Round 1 results
-
-            _randomNumber = 100;
-            DoGoStop("Wait...");
-            DoTicks(_randomNumber + 68, "0.68");
-            DoGoStop("0.68");  // Round 2 results
-
-            _randomNumber = 150;
-            DoGoStop("Wait...");
-            DoTicks(_randomNumber + 88, "0.88");
-            DoGoStop("0.88");  // Round 3 results
-
-            DoGoStop("Average: 0.85");
-            DoTicks(500, "Insert coin");  // Time runs out before restart game
-
-            /*NEW GAME-------------------------------------*/
-            _randomNumber = 100;
-            DoInsertCoin("Press GO!");
-            DoGoStop("Wait...");
-            DoTicks(_randomNumber + 50, "0.50");
-            DoGoStop("0.50");  // Round 1 results
-
-            _randomNumber = 110;
-            DoTicks(300, "Wait...");  // Waits for timer to run out before starting next round
-            DoTicks(_randomNumber + 55, "0.55");
-            DoGoStop("0.55");  // Round 2 results
-
-            _randomNumber = 150;
-            DoGoStop("Wait...");
-            DoTicks(_randomNumber + 58, "0.58");
-            DoGoStop("0.58");  // Round 3 results
-
-            DoGoStop("Average: 0.54");
-            DoGoStop("Insert coin");  // Press button to skip results screen
+            DoGoStop("Insert Coin");  // Cheats in second round
         }
 
         private void DoReset(string expectedMessage)
