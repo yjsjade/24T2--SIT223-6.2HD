@@ -6,7 +6,7 @@ namespace Projects.Test
     {
         private static IController _controller;
         private static IGui _gui;
-        private static string _displayText;
+        private static string _displayText = string.Empty;
         private static int _randomNumber;
 
         static ReactionControllerTests()
