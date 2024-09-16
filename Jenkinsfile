@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        DOTNET_ROOT = 'C:\\Program Files\\dotnet' 
+        docker { image 'docker:latest' }
     }
 
     stages {
