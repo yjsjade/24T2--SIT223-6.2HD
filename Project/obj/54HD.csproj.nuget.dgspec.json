@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jings\\OneDrive\\Desktop\\university\\24T1\\SIT232 OBJECT-ORIENTED DEVELOPMENT\\19. 5.4HD Enhanced Reaction-timer\\54HD\\54HD.csproj": {}
+    "C:\\Users\\jings\\OneDrive\\Desktop\\24T2\\SIT223 Professional Practice in Information Technology\\6.2HD DevOps Pipeline\\24T2--SIT223-6.2HD\\Project\\54HD.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jings\\OneDrive\\Desktop\\university\\24T1\\SIT232 OBJECT-ORIENTED DEVELOPMENT\\19. 5.4HD Enhanced Reaction-timer\\54HD\\54HD.csproj": {
+    "C:\\Users\\jings\\OneDrive\\Desktop\\24T2\\SIT223 Professional Practice in Information Technology\\6.2HD DevOps Pipeline\\24T2--SIT223-6.2HD\\Project\\54HD.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jings\\OneDrive\\Desktop\\university\\24T1\\SIT232 OBJECT-ORIENTED DEVELOPMENT\\19. 5.4HD Enhanced Reaction-timer\\54HD\\54HD.csproj",
+        "projectUniqueName": "C:\\Users\\jings\\OneDrive\\Desktop\\24T2\\SIT223 Professional Practice in Information Technology\\6.2HD DevOps Pipeline\\24T2--SIT223-6.2HD\\Project\\54HD.csproj",
         "projectName": "54HD",
-        "projectPath": "C:\\Users\\jings\\OneDrive\\Desktop\\university\\24T1\\SIT232 OBJECT-ORIENTED DEVELOPMENT\\19. 5.4HD Enhanced Reaction-timer\\54HD\\54HD.csproj",
+        "projectPath": "C:\\Users\\jings\\OneDrive\\Desktop\\24T2\\SIT223 Professional Practice in Information Technology\\6.2HD DevOps Pipeline\\24T2--SIT223-6.2HD\\Project\\54HD.csproj",
         "packagesPath": "C:\\Users\\jings\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jings\\OneDrive\\Desktop\\university\\24T1\\SIT232 OBJECT-ORIENTED DEVELOPMENT\\19. 5.4HD Enhanced Reaction-timer\\54HD\\obj\\",
+        "outputPath": "C:\\Users\\jings\\OneDrive\\Desktop\\24T2\\SIT223 Professional Practice in Information Technology\\6.2HD DevOps Pipeline\\24T2--SIT223-6.2HD\\Project\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
