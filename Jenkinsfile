@@ -9,7 +9,6 @@ pipeline {
         stage('Checkout and restore dependencies') {
             steps {
                 git branch: 'main', url: 'https://github.com/yjsjade/24T2--SIT223-6.2HD.git'
-                bat 'dotnet restore 54HD.sln'
             }
         }
 
