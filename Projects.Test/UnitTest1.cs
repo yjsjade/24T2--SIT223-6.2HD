@@ -9,7 +9,7 @@ namespace Projects.Test
         private static string _displayText;
         private static int _randomNumber;
 
-        public ReactionControllerTests()
+        static ReactionControllerTests()
         {
             // Initialize your controller and gui here
             _controller = new EnhancedReactionController();
