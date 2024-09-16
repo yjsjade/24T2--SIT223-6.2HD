@@ -23,9 +23,9 @@ namespace Projects.Test
         public void SimpleTest()
         {
             // IDLE
-            DoReset("Insert coin");
-            DoGoStop("Insert coin");
-            DoTicks(1, "Insert coin");
+            DoReset("Insert Coin");
+            DoGoStop("Insert Coin");
+            DoTicks(1, "Insert Coin");
 
             // Coin inserted with inactive player
             DoInsertCoin("Press GO!");
