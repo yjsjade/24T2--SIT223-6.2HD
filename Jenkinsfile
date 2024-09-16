@@ -38,9 +38,10 @@ pipeline {
                 withSonarQubeEnv('SonarQube') {
                     // SonarQube scan for code quality
                     withSonarQubeEnv('SonarQube') {
-                    sh 'dotnet sonarscanner begin /k:"your-sonarqube-key" /d:sonar.login=${SONARQUBE_TOKEN}'
-                    sh 'dotnet build'
-                    sh 'dotnet sonarscanner end /d:sonar.login=${SONARQUBE_TOKEN}'
+                        sh 'dotnet sonarscanner begin /k:"your-sonarqube-key" /d:sonar.login=${SONARQUBE_TOKEN}'
+                        sh 'dotnet build'
+                        sh 'dotnet sonarscanner end /d:sonar.login=${SONARQUBE_TOKEN}'
+                    }
                 }
             }
         }
@@ -68,5 +69,6 @@ pipeline {
                 }
             }
         }
+        
     }
 }
