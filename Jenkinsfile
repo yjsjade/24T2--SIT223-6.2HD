@@ -1,8 +1,10 @@
 pipeline {
-    agent any
+    agent {
+        docker { image 'mcr.microsoft.com/dotnet/sdk:8.0' }
+    }
 
     stages {
-        stage('Checkout and restore dependencies') {
+        stage('Checkout') {
             steps {
                 git branch: 'main', url: 'https://github.com/yjsjade/24T2--SIT223-6.2HD.git'
             }
@@ -33,7 +35,7 @@ pipeline {
                 withSonarQubeEnv('SonarQube') {
                     // SonarQube scan for code quality
                     withSonarQubeEnv('SonarQube') {
-                        sh 'dotnet sonarscanner begin /k:"your-sonarqube-key" /d:sonar.login=${SONARQUBE_TOKEN}'
+                        sh 'dotnet sonarscanner begin /k:"sonarqube-key" /d:sonar.login=${SONARQUBE_TOKEN}'
                         sh 'dotnet build'
                         sh 'dotnet sonarscanner end /d:sonar.login=${SONARQUBE_TOKEN}'
                     }
