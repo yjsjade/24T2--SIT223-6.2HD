@@ -1,10 +1,6 @@
 pipeline {
     agent any
 
-    environment {
-        DOTNET_ROOT = 'C:\\Program Files\\dotnet'
-    }
-
     stages {
         stage('Checkout and restore dependencies') {
             steps {
