@@ -15,14 +15,14 @@ pipeline {
         stage('Build') {
             steps {
                 // Build the .NET project
-                bat 'dotnet build 54HD.sln --configuration Release'
+                sh 'dotnet build 54HD.sln --configuration Release'
             }
         }
 
         stage('Test') {
             steps {
                 // Run tests using dotnet test
-                bat 'dotnet test Project.Tests/54HD.csproj --no-build'
+                sh 'dotnet test Project.Tests/54HD.csproj --no-build'
             }
             post {
                 always {
@@ -37,9 +37,9 @@ pipeline {
                 withSonarQubeEnv('SonarQube') {
                     // SonarQube scan for code quality
                     withSonarQubeEnv('SonarQube') {
-                        bat 'dotnet sonarscanner begin /k:"your-sonarqube-key" /d:sonar.login=${SONARQUBE_TOKEN}'
-                        bat 'dotnet build'
-                        bat 'dotnet sonarscanner end /d:sonar.login=${SONARQUBE_TOKEN}'
+                        sh 'dotnet sonarscanner begin /k:"your-sonarqube-key" /d:sonar.login=${SONARQUBE_TOKEN}'
+                        sh 'dotnet build'
+                        sh 'dotnet sonarscanner end /d:sonar.login=${SONARQUBE_TOKEN}'
                     }
                 }
             }
@@ -47,17 +47,17 @@ pipeline {
 
         stage('Deploy to Test Environment') {
             steps {
-                bat 'dotnet publish YourProject.sln -c Release -o ./publish'
-                bat 'docker build -t coin:test ./publish'
-                bat 'docker run -d -p 8081:80 coin:test'
+                sh 'dotnet publish YourProject.sln -c Release -o ./publish'
+                sh 'docker build -t coin:test ./publish'
+                sh 'docker run -d -p 8081:80 coin:test'
             }
         }
         
 
         stage('Release to Production') {
             steps {
-                bat 'docker build -t coin:latest ./publish'
-                bat 'docker run -d -p 81:80 coin:latest'
+                sh 'docker build -t coin:latest ./publish'
+                sh 'docker run -d -p 81:80 coin:latest'
             }
         }
 
