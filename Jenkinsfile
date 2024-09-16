@@ -1,39 +1,28 @@
 pipeline {
     agent any
 
-    stages {
-        stage('Build Docker Image') {
-            steps {
-                script {
-                    // Ensure Docker is installed and accessible
-                    sh 'docker --version'
-                    
-                    // Build Docker image
-                    sh 'docker build -t my-dotnet-app .'
-                }
-            }
-        }
+    environment {
+        DOTNET_ROOT = 'C:\\Program Files\\dotnet'
+    }
 
-        stage('Run Docker Container') {
+    stages {
+        stage('Checkout and restore dependencies') {
             steps {
-                script {
-                    // Run Docker container
-                    sh 'docker run -d -p 8080:80 my-dotnet-app'
-                }
+                git branch: 'main', url: 'https://github.com/yjsjade/24T2--SIT223-6.2HD.git'
             }
         }
 
         stage('Build') {
             steps {
-                // Assuming dotnet is available in the Docker container
-                sh 'dotnet build Projects/54HD.sln --configuration Release'
+                // Build the .NET project
+                sh 'dotnet build 54HD.sln --configuration Release'
             }
         }
 
         stage('Test') {
             steps {
                 // Run tests using dotnet test
-                sh 'dotnet test Projects/54HD.csproj --no-build'
+                sh 'dotnet test Project.Tests/54HD.csproj --no-build'
             }
             post {
                 always {
@@ -47,21 +36,24 @@ pipeline {
             steps {
                 withSonarQubeEnv('SonarQube') {
                     // SonarQube scan for code quality
-                    sh 'dotnet sonarscanner begin /k:"your-sonarqube-key" /d:sonar.login=${SONARQUBE_TOKEN}'
-                    sh 'dotnet build'
-                    sh 'dotnet sonarscanner end /d:sonar.login=${SONARQUBE_TOKEN}'
+                    withSonarQubeEnv('SonarQube') {
+                        sh 'dotnet sonarscanner begin /k:"your-sonarqube-key" /d:sonar.login=${SONARQUBE_TOKEN}'
+                        sh 'dotnet build'
+                        sh 'dotnet sonarscanner end /d:sonar.login=${SONARQUBE_TOKEN}'
+                    }
                 }
             }
         }
 
         stage('Deploy to Test Environment') {
             steps {
-                sh 'dotnet publish Projects/54HD.sln -c Release -o ./publish'
+                sh 'dotnet publish YourProject.sln -c Release -o ./publish'
                 sh 'docker build -t coin:test ./publish'
                 sh 'docker run -d -p 8081:80 coin:test'
             }
         }
         
+
         stage('Release to Production') {
             steps {
                 sh 'docker build -t coin:latest ./publish'
@@ -76,5 +68,6 @@ pipeline {
                 }
             }
         }
+        
     }
 }
