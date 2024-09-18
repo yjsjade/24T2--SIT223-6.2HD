@@ -5,6 +5,4 @@ services:
       - "80:80"
     environment:
       - ENVIRONMENT=production
-    networks:
-      - app-network
     restart: always
