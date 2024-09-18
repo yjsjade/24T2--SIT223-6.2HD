@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  web:
+    image: coin:latest
+    ports:
+      - "80:80"
+    environment:
+      - ENVIRONMENT=production
+    networks:
+      - app-network
+    restart: always
