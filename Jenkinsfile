@@ -46,7 +46,6 @@ pipeline {
             }
         }
         
-
         stage('Release') {
             steps {
                 sh 'docker build -t coin:latest .'
@@ -61,11 +60,9 @@ pipeline {
                 }
             }
         }
-    }    
-}
+    }
 
-post {
-    always {
+    steps {
         script {
             echo 'Cleaning up resources...'
             sh 'docker-compose down'
