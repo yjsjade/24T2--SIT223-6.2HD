@@ -33,9 +33,9 @@ pipeline {
         stage('Code Quality Analysis') {
             steps {
                 withSonarQubeEnv('SonarQube Server') {
-                    sh 'dotnet sonarscanner begin /k:"62hd-project" /d:sonar.login=$SONARQUBE_TOKEN'
+                    sh 'dotnet sonarscanner begin /k:"62hd-project" /d:sonar.login="$SONARQUBE_TOKEN" /d:sonar.host.url="http://10.141.6.152:9000"'
                     sh 'dotnet build'
-                    sh 'dotnet sonarscanner end /d:sonar.login=$SONARQUBE_TOKEN'
+                    sh 'dotnet sonarscanner end /d:sonar.login="$SONARQUBE_TOKEN"'
                 }
             }
         }
