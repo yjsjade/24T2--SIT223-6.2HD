@@ -1,4 +1,4 @@
-FROM yjsjade/62hd-image AS runtime
+FROM yjsjade/62hd-image
 
 WORKDIR /app
 
