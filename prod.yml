@@ -2,7 +2,7 @@ services:
   web:
     image: coin:latest
     ports:
-      - "80:80"
+      - "8081:80"
     environment:
       - ENVIRONMENT=production
     restart: always
