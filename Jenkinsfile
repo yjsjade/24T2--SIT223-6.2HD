@@ -60,12 +60,15 @@ pipeline {
                 }
             }
         }
+
+
     }
 
-    steps {
-        script {
-            echo 'Cleaning up resources...'
-            sh 'docker-compose down'
+    post {
+        always {
+            script {
+                sh 'docker-compose down'
+            }
         }
     }
 }
