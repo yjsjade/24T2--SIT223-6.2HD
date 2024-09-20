@@ -24,6 +24,12 @@ pipeline {
             }
         }
 
+        stage('Test') {
+            steps {
+                sh 'dotnet test Projects.Test/Projects.Test.sln --logger:"console;verbosity=detailed"'
+            }
+        }
+
         stage('Code Quality Analysis') {
             steps {
                 withSonarQubeEnv('SonarQube Server') {
@@ -31,12 +37,6 @@ pipeline {
                     sh 'dotnet build Project/54HD.sln'
                     sh 'dotnet sonarscanner end /d:sonar.login="$SONARQUBE_TOKEN"'
                 }
-            }
-        }
-
-        stage('Test') {
-            steps {
-                sh 'dotnet test Projects.Test/Projects.Test.sln --logger:"console;verbosity=detailed"'
             }
         }
 
@@ -61,6 +61,14 @@ pipeline {
                 }
             }
         }
-        
+    }    
+}
+
+post {
+    always {
+        script {
+            echo 'Cleaning up resources...'
+            sh 'docker-compose down'
+        }
     }
 }
